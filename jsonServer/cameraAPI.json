@@ -23,7 +23,7 @@
         "overallConf": 0,
         "alert": false,
         "noiseFloorMetric": 123.65985768212795,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/8b53ee36-c8a0-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/8b53ee36-c8a0-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "65bda11c-c8a0-11eb-8a22-0242ac120005",
@@ -49,7 +49,7 @@
         "overallConf": 243.87200927734375,
         "alert": true,
         "noiseFloorMetric": 124.27887590143406,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/65bda11c-c8a0-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/65bda11c-c8a0-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "3fc4495c-c8a0-11eb-8a22-0242ac120005",
@@ -68,7 +68,7 @@
         "overallConf": 10.490736961364746,
         "alert": false,
         "noiseFloorMetric": 125.09328748686957,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/3fc4495c-c8a0-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/3fc4495c-c8a0-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "1a7c2ce6-c8a0-11eb-8a22-0242ac120005",
@@ -87,7 +87,7 @@
         "overallConf": 4.4072370529174805,
         "alert": false,
         "noiseFloorMetric": 119.63506127968293,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/1a7c2ce6-c8a0-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/1a7c2ce6-c8a0-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "f48b41c0-c89f-11eb-8a22-0242ac120005",
@@ -113,7 +113,7 @@
         "overallConf": 26.019878387451172,
         "alert": false,
         "noiseFloorMetric": 119.5206824026368,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/f48b41c0-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/f48b41c0-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "d11a0032-c89f-11eb-8a22-0242ac120005",
@@ -132,7 +132,7 @@
         "overallConf": 31.832468032836914,
         "alert": false,
         "noiseFloorMetric": 119.39907567712129,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/d11a0032-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/d11a0032-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "a97633de-c89f-11eb-8a22-0242ac120005",
@@ -158,7 +158,7 @@
         "overallConf": 67.55815887451172,
         "alert": true,
         "noiseFloorMetric": 162.55770818324137,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/a97633de-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/a97633de-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "848178ae-c89f-11eb-8a22-0242ac120005",
@@ -177,7 +177,7 @@
         "overallConf": 101.648681640625,
         "alert": true,
         "noiseFloorMetric": 158.68648177089204,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/848178ae-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/848178ae-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "5db454c6-c89f-11eb-8a22-0242ac120005",
@@ -196,7 +196,7 @@
         "overallConf": 52.06591796875,
         "alert": true,
         "noiseFloorMetric": 154.04413455446155,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/5db454c6-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/5db454c6-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "38f7839c-c89f-11eb-8a22-0242ac120005",
@@ -215,7 +215,7 @@
         "overallConf": 60.042869567871094,
         "alert": true,
         "noiseFloorMetric": 156.8665100842636,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/38f7839c-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/38f7839c-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "1247c22a-c89f-11eb-8a22-0242ac120005",
@@ -234,7 +234,7 @@
         "overallConf": 19.245452880859375,
         "alert": false,
         "noiseFloorMetric": 160.57572008147548,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/1247c22a-c89f-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/1247c22a-c89f-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "ed108df2-c89e-11eb-8a22-0242ac120005",
@@ -267,7 +267,7 @@
         "overallConf": 89.16780853271484,
         "alert": true,
         "noiseFloorMetric": 165.03542806190387,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/ed108df2-c89e-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/ed108df2-c89e-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "c7873ae0-c89e-11eb-8a22-0242ac120005",
@@ -278,7 +278,7 @@
         "overallConf": 0,
         "alert": false,
         "noiseFloorMetric": 121.16823901363097,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/c7873ae0-c89e-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/c7873ae0-c89e-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "21a645aa-c88d-11eb-8a22-0242ac120005",
@@ -297,7 +297,7 @@
         "overallConf": 39.805992126464844,
         "alert": false,
         "noiseFloorMetric": 86.16301821547123,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/21a645aa-c88d-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/21a645aa-c88d-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "fba8e7fe-c88c-11eb-8a22-0242ac120005",
@@ -316,7 +316,7 @@
         "overallConf": 37.155784606933594,
         "alert": false,
         "noiseFloorMetric": 87.70602382263517,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/fba8e7fe-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/fba8e7fe-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "d60fb55e-c88c-11eb-8a22-0242ac120005",
@@ -335,7 +335,7 @@
         "overallConf": 30.914918899536133,
         "alert": false,
         "noiseFloorMetric": 88.46340828055463,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/d60fb55e-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/d60fb55e-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "afe16a58-c88c-11eb-8a22-0242ac120005",
@@ -354,7 +354,7 @@
         "overallConf": 56.445640563964844,
         "alert": true,
         "noiseFloorMetric": 88.38175832076219,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/afe16a58-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/afe16a58-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "89a4ea90-c88c-11eb-8a22-0242ac120005",
@@ -373,7 +373,7 @@
         "overallConf": 46.355812072753906,
         "alert": false,
         "noiseFloorMetric": 88.70326587687,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/89a4ea90-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/89a4ea90-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "649183b2-c88c-11eb-8a22-0242ac120005",
@@ -392,7 +392,7 @@
         "overallConf": 51.22053146362305,
         "alert": true,
         "noiseFloorMetric": 88.51767640056164,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/649183b2-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/649183b2-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "3de48a8e-c88c-11eb-8a22-0242ac120005",
@@ -411,7 +411,7 @@
         "overallConf": 72.95689392089844,
         "alert": true,
         "noiseFloorMetric": 86.9970870620482,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/3de48a8e-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/3de48a8e-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "18ce9a46-c88c-11eb-8a22-0242ac120005",
@@ -430,7 +430,7 @@
         "overallConf": 53.85679626464844,
         "alert": true,
         "noiseFloorMetric": 85.27305626350717,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/18ce9a46-c88c-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/18ce9a46-c88c-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "f33ca71e-c88b-11eb-8a22-0242ac120005",
@@ -449,7 +449,7 @@
         "overallConf": 56.662200927734375,
         "alert": true,
         "noiseFloorMetric": 78.94482589851066,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/f33ca71e-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/f33ca71e-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "cd7c8d1e-c88b-11eb-8a22-0242ac120005",
@@ -468,7 +468,7 @@
         "overallConf": 74.25138854980469,
         "alert": true,
         "noiseFloorMetric": 81.13132382334112,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/cd7c8d1e-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/Novembers/cd7c8d1e-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "a7b984ec-c88b-11eb-8a22-0242ac120005",
@@ -487,7 +487,7 @@
         "overallConf": 71.68363952636719,
         "alert": true,
         "noiseFloorMetric": 82.6886108824655,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/a7b984ec-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/a7b984ec-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "821bc902-c88b-11eb-8a22-0242ac120005",
@@ -506,7 +506,7 @@
         "overallConf": 49.17475509643555,
         "alert": false,
         "noiseFloorMetric": 84.85484249642533,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/821bc902-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/821bc902-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "5ccedf40-c88b-11eb-8a22-0242ac120005",
@@ -517,7 +517,7 @@
         "overallConf": 0,
         "alert": false,
         "noiseFloorMetric": 85.49014105550445,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/5ccedf40-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/5ccedf40-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "367ce76a-c88b-11eb-8a22-0242ac120005",
@@ -543,7 +543,7 @@
         "overallConf": 54.99724197387695,
         "alert": true,
         "noiseFloorMetric": 85.33873989446931,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/367ce76a-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/367ce76a-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "11aad960-c88b-11eb-8a22-0242ac120005",
@@ -562,7 +562,7 @@
         "overallConf": 39.60615539550781,
         "alert": false,
         "noiseFloorMetric": 84.29910554854712,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/11aad960-c88b-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/11aad960-c88b-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "eb08f68e-c88a-11eb-8a22-0242ac120005",
@@ -588,7 +588,7 @@
         "overallConf": 57.538787841796875,
         "alert": true,
         "noiseFloorMetric": 86.81269483682173,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/eb08f68e-c88a-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/eb08f68e-c88a-11eb-8a22-0242ac120005.png"
       },
       {
         "id": "c685a9d8-c88a-11eb-8a22-0242ac120005",
@@ -614,7 +614,7 @@
         "overallConf": 44.382999420166016,
         "alert": false,
         "noiseFloorMetric": 87.01117069585418,
-        "jpg": "https://img.kuvasystems.com/kuva/v1/img/scres/scan-results/November/2021/Jun/08/c685a9d8-c88a-11eb-8a22-0242ac120005.png"
+        "jpg": "/Assets/November/c685a9d8-c88a-11eb-8a22-0242ac120005.png"
       }
     ],
     "hasTelemetry": true,

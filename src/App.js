@@ -38,6 +38,7 @@ function App() {
     >
       <NavigationBar />
       <div
+        // Styles can be defined in a seperate file using mui useStyle
         style={{
           display: "flex",
           flexDirection: "row",
