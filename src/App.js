@@ -1,9 +1,11 @@
 import "./App.css";
+import logo from './logo.svg';
+
 import { useEffect, useState } from "react";
 import NavigationBar from "./pages/NavigationBar";
+const axios = require('axios').default;
 
 function App() {
-  const axios = require("axios");
   const baseURL = "http://localhost:7071";
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -38,7 +40,7 @@ function App() {
     >
       <NavigationBar />
       <div
-        // Styles can be defined in a seperate file using mui useStyle
+        // TODO: Styles can be defined in a seperate file using mui useStyle
         style={{
           display: "flex",
           flexDirection: "row",
