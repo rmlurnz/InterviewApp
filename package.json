@@ -16,7 +16,6 @@
   },
   "scripts": {
     "jsonserver": "json-server --watch ./jsonServer/cameraAPI.json --port 7071 --nc false --routes ./jsonServer/routes.json",
-    "start2": "react-scripts start",
     "start": "concurrently \"npm run jsonserver\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
