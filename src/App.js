@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 import { useEffect, useState } from "react";
 import NavigationBar from "./pages/NavigationBar";
-const axios = require('axios').default;
+import axios from "axios";
 
 function App() {
   const baseURL = "http://localhost:7071";
