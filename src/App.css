@@ -64,6 +64,14 @@
   padding: 14px 24px;
 }
 
+.Filter {
+  margin: 0 0 20px 0;
+}
+
+.Metadata-Group {
+  margin: 20px;
+}
+
 /* Included with forked project - Not used yet */
 /* .App-header {
   background-color: #282c34;
