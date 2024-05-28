@@ -19,7 +19,7 @@ This project mimics our production application APIs using the json-server packag
 The json files contain a list of organizations (e.g. Kuva clients), a list of available cameras, and a list of gas events (this includes a *scanresults* object: an array of images and their associated metadata). You can read and write to the json files using standard HTTP Methods (GET, POST, PUT, DELETE). The project currently uses Axios to handle HTTP requests. 
 
 More information about the server is available [here](https://www.npmjs.com/package/json-server).\
-More information about our HTTP client is is available [here](https://www.npmjs.com/package/axiosr).
+More information about our HTTP client is is available [here](https://www.npmjs.com/package/axios).
 
 ### Recommended Tasks
 

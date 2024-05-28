@@ -1,9 +1,9 @@
-import "./App.css";
-import logo from './logo.svg';
-
 import { useEffect, useState } from "react";
-import NavigationBar from "./pages/NavigationBar";
 import axios from "axios";
+
+import NavigationBar from "./components/NavigationBar";
+import "./App.css";
+// import logo from './logo.svg';
 
 function App() {
   const baseURL = "http://localhost:7071";
@@ -28,52 +28,53 @@ function App() {
     getEvents();
   }, []);
 
+  const handlePreviousImage = () => {
+    let newImageIndex = currentImageIndex - 1;
+    if (newImageIndex < 0) {
+      newImageIndex = images.length - 1;
+    }
+    setCurrentImageIndex(newImageIndex);
+  }
+
+  const handleNextImage = () => {
+    let newImageIndex = currentImageIndex + 1;
+    if (newImageIndex >= images.length) {
+      newImageIndex = 0
+    }
+    setCurrentImageIndex(newImageIndex);
+  }
+
   return (
     //TODO: This code should be factored out into multiple files
-    <div
-      className="App"
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "row",
-      }}
-    >
+    <div className="App">
+
       <NavigationBar />
-      <div
-        // TODO: Styles can be defined in a seperate file using mui useStyle
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          alignContent: "center",
-          width: "85%",
-          height: "100%",
-        }}
-      >
-        {/* TODO: This button does nothing!  */}
-        <button type="button">Previous Image</button>
+
+      <div className="Content">
+
+        <button className="Scan-Button" type="button" onClick={handlePreviousImage}>Previous Image</button>
+
         <div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="Image-Header">
             <div> {images.length} total images </div>
             <div> Index: {currentImageIndex} </div>
           </div>
-          {images.length > 0 && <img src={images[currentImageIndex].jpg} />}
+
+          {images.length > 0 && <img className="Scan-Results" src={images[currentImageIndex].jpg} alt="Potential Leak Scan Results" />}
+
           {images[currentImageIndex]?.createdOn && (
             <div> Scan Timestamp: {images[currentImageIndex].createdOn} </div>
           )}
+
           {/* TODO: Finish adding image metadata!  */}
           <div> Image Metadata: INCOMPLETE </div>
-          <div> Number of Detections: INCOMPLETE </div>
+
+          {images[currentImageIndex]?.detectionsList && (
+            <div> Number of Detections: {images[currentImageIndex].detectionsList.length} </div>
+          )}
         </div>
-        {/* TODO: This button also does nothing  */}
-        <button type="button">Next Image</button>
+
+        <button className="Scan-Button" type="button" onClick={handleNextImage}>Next Image</button>
       </div>
     </div>
   );
