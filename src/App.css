@@ -31,15 +31,22 @@
 }
 
 /* Home Page */
-.Home {
+.Home-Container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
   width: 85%;
-  height: 100%;
   background-color: #313131;
+  color: white;
+}
+
+.Home-Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
@@ -73,4 +80,8 @@
 
 .Metadata-Group {
   margin: 20px;
+}
+
+.Error {
+  color: crimson;
 }
