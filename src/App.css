@@ -45,9 +45,29 @@
 .Home-Content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
   color: white;
+  height: 700px;
+}
+
+.Home-Left {
+  height: 700px;
+  width: 535px;
+}
+
+.Home-Right {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 535px;
+}
+
+.Home-Buttons {
+  margin: 10px 0;
 }
 
 .Image-Header {
@@ -58,6 +78,7 @@
 
 .Scan-Results {
   margin: 20px 0;
+  height: 700px;
 }
 
 .Scan-Button {
@@ -74,14 +95,46 @@
   padding: 14px 24px;
 }
 
+.Scan-Button:hover {
+  background-color: #b43900;
+}
+
 .Filter {
   margin: 0 0 20px 0;
 }
 
-.Metadata-Group {
-  margin: 20px;
-}
-
 .Error {
   color: crimson;
+}
+
+.Event-Data-Table {
+  width: 80%;
+  overflow-wrap: break-word;
+  margin: 0 0 11px 0;
+}
+
+.Event-Data-Table td:nth-child(1) {
+ text-align: left;
+ font-weight: bold;
+}
+
+.Event-Data-Table td:nth-child(2) {
+  text-align: right;
+  color: #ff5100;
+}
+
+.Detection-Title {
+  font-weight: bold;
+  color: #222222;
+}
+
+.Detection-Table {
+  background-color: #575757;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+/* Other Pages */
+.Account, .Settings {
+  width: 85%;
 }

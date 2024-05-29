@@ -14,14 +14,14 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   //TODO: API functions (more to be added) should be in their own file!
-  const getEvents = () => {
+  useEffect(() => {
     axios
       .get(`${baseURL}/events`)
       .then(function (response) {
         setError(null);
 
         dispatch({type: "SET_EVENTS", payload: response.data.scanResults});
-        
+
         setViewableEvents(response.data.scanResults);
 
         let detectionScans = [];
@@ -37,11 +37,7 @@ const Home = () => {
       .catch(function (error) {
         setError(error.message);
       });
-  };
-
-  useEffect(() => {
-    getEvents();
-  }, []);
+  }, [dispatch]);
 
   const handlePreviousEvent = () => {
     let newEventIndex = currentEventIndex - 1;
@@ -72,16 +68,13 @@ const Home = () => {
     <div className="Home-Container">
       {error ? <div className="Error">{ error }</div> : 
       <div className="Home-Content">
-        <button className="Scan-Button" type="button" onClick={handlePreviousEvent}>Previous</button>
 
-        <div>
+        <div className="Home-Left">
           <div className="Image-Header">
             <div> {viewableEvents.length} total images </div>
             <div> Index: {currentEventIndex} </div>
           </div>
-
           {viewableEvents.length > 0 && <img className="Scan-Results" src={viewableEvents[currentEventIndex].jpg} alt="Potential Leak Scan Results" />}
-
           <div className="Filter">
             <label htmlFor="Toggle-No-Detection-Scans">
               <input type="checkbox" 
@@ -91,37 +84,68 @@ const Home = () => {
               Include No-Detection Scans
             </label>
           </div>
-
-          {viewableEvents[currentEventIndex]?.createdOn && (
-            <div> Scan Timestamp: {viewableEvents[currentEventIndex].createdOn} </div>
-          )}
-
-          {/* Metadata */}
-          {viewableEvents[currentEventIndex]?.noiseFloorMetric ? (
-            <div> Noise Floor Metric: {viewableEvents[currentEventIndex].noiseFloorMetric} </div>
-          ) : ""}
-          {viewableEvents[currentEventIndex]?.overallConf ? (
-            <div> Overall Confidence: {viewableEvents[currentEventIndex].overallConf} </div>
-          ) : ""}
-
-          {viewableEvents[currentEventIndex]?.detectionsList && (
-            <div> Number of Detections: {viewableEvents[currentEventIndex].detectionsList.length} </div>
-          )}
-
-          {viewableEvents[currentEventIndex]?.detectionsList.map((detection, index) => (
-            <div className="Metadata-Group">
-              <div>Detection {index + 1} Metadata</div>
-              <div>Meancoldens: {detection.meancoldens}</div>
-              <div>Meanconf: {detection.meanconf}</div>
-              <div>Sumconf: {detection.sumconf}</div>
-              <div>UUID: {detection.uuid}</div>
-              <div>Roicoordslist: {JSON.stringify(detection.roicoordsList)}</div>
-            </div>
-          ))}
-          
         </div>
 
-        <button className="Scan-Button" type="button" onClick={handleNextEvent}>Next</button>
+        <div className="Home-Right">
+          <div className="Home-Buttons">
+            <button className="Scan-Button" type="button" onClick={handlePreviousEvent}>Previous</button>
+            <button className="Scan-Button" type="button" onClick={handleNextEvent}>Next</button>
+          </div>
+
+          <table className="Event-Data-Table">
+            {viewableEvents[currentEventIndex]?.createdOn && (
+              <tr>
+                <td>Scan Timestamp:</td>
+                <td>{viewableEvents[currentEventIndex].createdOn}</td>
+              </tr>
+            )}
+            {/* Metadata */}
+            {viewableEvents[currentEventIndex]?.noiseFloorMetric ? (
+              <tr>
+                <td>Noise Floor Metric:</td>
+                <td>{viewableEvents[currentEventIndex].noiseFloorMetric}</td>
+              </tr>
+            ) : ""}
+            {viewableEvents[currentEventIndex]?.overallConf ? (
+              <tr>
+                <td>Overall Confidence:</td>
+                <td>{viewableEvents[currentEventIndex].overallConf}</td>
+              </tr>
+            ) : ""}
+            {viewableEvents[currentEventIndex]?.detectionsList && (
+              <tr>
+                <td>Number of Detections:</td>
+                <td>{viewableEvents[currentEventIndex].detectionsList.length}</td>
+              </tr>
+            )}
+          </table>
+
+          {viewableEvents[currentEventIndex]?.detectionsList.map((detection, index) => (
+              <table className="Event-Data-Table Detection-Table">
+                <tr><td className="Detection-Title">Detection {index + 1}</td></tr>
+                <tr>
+                  <td>Meancoldens:</td>
+                  <td>{detection.meancoldens}</td>
+                </tr>
+                <tr>
+                  <td>Meanconf:</td>
+                  <td>{detection.meanconf}</td>
+                </tr>
+                <tr>
+                  <td>Sumconf:</td>
+                  <td>{detection.sumconf}</td>
+                </tr>
+                <tr>
+                  <td>UUID:</td>
+                  <td>{detection.uuid}</td>
+                </tr>
+                <tr>
+                  <td>Roicoordslist:</td>
+                  <td>{JSON.stringify(detection.roicoordsList)}</td>
+                </tr>
+              </table>
+          ))}
+        </div>        
       </div>}
     </div>
   )
