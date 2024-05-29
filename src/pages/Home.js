@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
+import { useEventsContext } from "../hooks/useEventsContext";
 import axios from "axios";
 
 const Home = () => {
   const baseURL = "http://localhost:7071";
-  const [images, setImages] = useState([]);
-  const [allImages, setAllImages] = useState([]);
-  const [filteredImages, setFilteredImages] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const {events, dispatch} = useEventsContext();
+
+  const [viewableEvents, setViewableEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
   const [checked, setChecked] = useState(true);
 
   //TODO: API functions (more to be added) should be in their own file!
@@ -14,16 +17,22 @@ const Home = () => {
     axios
       .get(`${baseURL}/events`)
       .then(function (response) {
-        console.log(response.data.scanResults)
-        setImages(response.data.scanResults);
-        setAllImages(response.data.scanResults);
+
+        console.log(response.data.scanResults);
+
+        dispatch({type: "SET_EVENTS", payload: response.data.scanResults})
+   
+        setViewableEvents(response.data.scanResults);
+
         let detectionScans = [];
+
         for (let result of response.data.scanResults) {
           if (result.detectionsList && result.detectionsList.length !== 0) {
             detectionScans.push(result)
           }
         }
-        setFilteredImages(detectionScans);
+
+        setFilteredEvents(detectionScans);
       })
       .catch(function (error) {
         //TODO: this should display an error in the UI!
@@ -35,86 +44,85 @@ const Home = () => {
     getEvents();
   }, []);
 
-  const handlePreviousImage = () => {
-    let newImageIndex = currentImageIndex - 1;
-    if (newImageIndex < 0) {
-      newImageIndex = images.length - 1;
+  const handlePreviousEvent = () => {
+    let newEventIndex = currentEventIndex - 1;
+    if (newEventIndex < 0) {
+      newEventIndex = events.length - 1;
     }
-    setCurrentImageIndex(newImageIndex);
+    setCurrentEventIndex(newEventIndex);
   }
 
-  const handleNextImage = () => {
-    let newImageIndex = currentImageIndex + 1;
-    if (newImageIndex >= images.length) {
-      newImageIndex = 0
+  const handleNextEvent = () => {
+    let newEventIndex = currentEventIndex + 1;
+    if (newEventIndex >= events.length) {
+      newEventIndex = 0
     }
-    setCurrentImageIndex(newImageIndex);
+    setCurrentEventIndex(newEventIndex);
   }
 
   const handleFilterToggle = () => {
     if (checked) {
-      setImages(filteredImages);
+      setViewableEvents(filteredEvents);
     } else {
-      setImages(allImages);
+      setViewableEvents(events);
     }
     setChecked((state) => !state);
   }
 
   return (
     <div className="Home">
+      <button className="Scan-Button" type="button" onClick={handlePreviousEvent}>Previous</button>
 
-        <button className="Scan-Button" type="button" onClick={handlePreviousImage}>Previous Image</button>
-
-        <div>
-          <div className="Image-Header">
-            <div> {images.length} total images </div>
-            <div> Index: {currentImageIndex} </div>
-          </div>
-
-          {images.length > 0 && <img className="Scan-Results" src={images[currentImageIndex].jpg} alt="Potential Leak Scan Results" />}
-
-          <div className="Filter">
-            <label htmlFor="Toggle-No-Detection-Scans">
-              <input type="checkbox" 
-                id="Toggle-No-Detection-Scans" 
-                defaultChecked={checked}
-                onChange={handleFilterToggle}/>
-              Include No-Detection Scans
-            </label>
-          </div>
-
-          {images[currentImageIndex]?.createdOn && (
-            <div> Scan Timestamp: {images[currentImageIndex].createdOn} </div>
-          )}
-
-          {/* Metadata */}
-          {images[currentImageIndex]?.noiseFloorMetric ? (
-            <div> Noise Floor Metric: {images[currentImageIndex].noiseFloorMetric} </div>
-          ) : ""}
-          {images[currentImageIndex]?.overallConf ? (
-            <div> Overall Confidence: {images[currentImageIndex].overallConf} </div>
-          ) : ""}
-
-          {images[currentImageIndex]?.detectionsList && (
-            <div> Number of Detections: {images[currentImageIndex].detectionsList.length} </div>
-          )}
-
-          {images[currentImageIndex]?.detectionsList.map((detection, index) => (
-            <div className="Metadata-Group">
-              <div>Detection {index + 1} Metadata</div>
-              <div>Meancoldens: {detection.meancoldens}</div>
-              <div>Meanconf: {detection.meanconf}</div>
-              <div>Sumconf: {detection.sumconf}</div>
-              <div>UUID: {detection.uuid}</div>
-              <div>Roicoordslist: {JSON.stringify(detection.roicoordsList)}</div>
-            </div>
-          ))}
-          
+      <div>
+        <div className="Image-Header">
+          <div> {viewableEvents.length} total images </div>
+          <div> Index: {currentEventIndex} </div>
         </div>
 
-        <button className="Scan-Button" type="button" onClick={handleNextImage}>Next Image</button>
+        {viewableEvents.length > 0 && <img className="Scan-Results" src={viewableEvents[currentEventIndex].jpg} alt="Potential Leak Scan Results" />}
+
+        <div className="Filter">
+          <label htmlFor="Toggle-No-Detection-Scans">
+            <input type="checkbox" 
+              id="Toggle-No-Detection-Scans" 
+              defaultChecked={checked}
+              onChange={handleFilterToggle}/>
+            Include No-Detection Scans
+          </label>
+        </div>
+
+        {viewableEvents[currentEventIndex]?.createdOn && (
+          <div> Scan Timestamp: {viewableEvents[currentEventIndex].createdOn} </div>
+        )}
+
+        {/* Metadata */}
+        {viewableEvents[currentEventIndex]?.noiseFloorMetric ? (
+          <div> Noise Floor Metric: {viewableEvents[currentEventIndex].noiseFloorMetric} </div>
+        ) : ""}
+        {viewableEvents[currentEventIndex]?.overallConf ? (
+          <div> Overall Confidence: {viewableEvents[currentEventIndex].overallConf} </div>
+        ) : ""}
+
+        {viewableEvents[currentEventIndex]?.detectionsList && (
+          <div> Number of Detections: {viewableEvents[currentEventIndex].detectionsList.length} </div>
+        )}
+
+        {viewableEvents[currentEventIndex]?.detectionsList.map((detection, index) => (
+          <div className="Metadata-Group">
+            <div>Detection {index + 1} Metadata</div>
+            <div>Meancoldens: {detection.meancoldens}</div>
+            <div>Meanconf: {detection.meanconf}</div>
+            <div>Sumconf: {detection.sumconf}</div>
+            <div>UUID: {detection.uuid}</div>
+            <div>Roicoordslist: {JSON.stringify(detection.roicoordsList)}</div>
+          </div>
+        ))}
+        
+      </div>
+
+      <button className="Scan-Button" type="button" onClick={handleNextEvent}>Next</button>
     </div>
   )
 }
 
-export default Home
+export default Home;

@@ -10,7 +10,6 @@ import "./App.css";
 function App() {
 
   return (
-    //TODO: This code should be factored out into multiple files
     <div className="App">
       <BrowserRouter>
         <NavigationBar />
