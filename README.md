@@ -43,7 +43,7 @@ If an image has a "detection" (gas identified by our internal algorithms), than 
 #### Navigation Bar  
 
 The site is currently only one page! It would be nice to have a functional navigation bar that lets you see other pages (e.g. Account, Settings).\
-Basic page routing can be done with [react router](https://reactrouter.com/web/guides/quick-start). 
+Basic page routing can be done with [react router](https://reactrouter.com/en/main). 
 
 #### Switch Selected Cameras
 
